@@ -1,2 +1,48 @@
-@use '../../../utils/styles/variables' as variables;
+@use "../../../utils/styles/variables" as variables;
 
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ********** BRANDING LOGO WRAPPER **********
+
+.headerContainer__leftWrapper {
+}
+
+.headerContainer__leftWrapper__imageWrapper {
+  width: 9em;
+}
+
+.headerContainer__leftWrapper__imageWrapper__image {
+  width: 100%;
+}
+
+// ********** NAV LOGO WRAPPER **********
+
+.headerContainer__rightWrapper {
+}
+
+.headerContainer__rightWrapper__navigation {
+}
+
+.headerContainer__rightWrapper__navigation__listWrapper {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+
+.headerContainer__rightWrapper__navigation__listWrapper__listItem {
+  @media (min-width: variables.$breakpointDesktop) {
+    font-size: variables.$navFontSizeDesktop;
+  }
+  color: variables.$fontColorPrimary;
+  font-size: variables.$navFontSizeMobile;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline variables.$fontColorPrimary;
+  }
+}

@@ -11,18 +11,16 @@ import Footer from "./views/components/footer/footer";
 
 // pages
 import Home from "./views/pages/home/home";
+import HousingForm from "./views/pages/housingForm/housingForm";
 import About from "./views/pages/about/about";
 import NotFound from "./views/pages/notFound/notFound";
-import HousingForm from "./views/pages/housingForm/housingForm";
 
-function App() {
+function App(): JSX.Element {
   return (
     <>
-      <header>
+      <Router>
         <Header />
-      </header>
-      <main>
-        <Router>
+        <main>
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
@@ -30,11 +28,9 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Router>
-      </main>
-      <footer>
+        </main>
         <Footer />
-      </footer>
+      </Router>
     </>
   );
 }

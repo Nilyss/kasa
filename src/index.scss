@@ -1,3 +1,5 @@
+@use './utils/styles/variables' as variables;
+
 // ********** GLOBAL SCSS FILE **********
 // RESET STYLES
 html,
@@ -8,4 +10,12 @@ html,
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  @media(min-width: variables.$breakpointDesktop) {
+    padding: 5em;
+  }
+  padding: 1.5em;
+  background-color: variables.$backgroundColorPrimary;
 }
