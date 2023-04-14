@@ -1,9 +1,16 @@
 @use "../../../utils/styles/variables" as variables;
 
 .headerContainer {
+  @media(min-width: variables.$breakpointDesktop) {
+    padding: 2em 6em 4em 6em;
+  }
+  padding: 1.5em;
+  background-color: variables.$backgroundColorPrimary;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+
 }
 
 // ********** BRANDING LOGO WRAPPER **********
@@ -12,6 +19,9 @@
 }
 
 .headerContainer__leftWrapper__imageWrapper {
+  @media (min-width: variables.$breakpointDesktop) {
+    width: 12em;
+  }
   width: 9em;
 }
 
@@ -29,13 +39,14 @@
 
 .headerContainer__rightWrapper__navigation__listWrapper {
   display: flex;
-  gap: 1em;
+  gap: 4em;
   list-style: none;
 }
 
 .headerContainer__rightWrapper__navigation__listWrapper__listItem {
   @media (min-width: variables.$breakpointDesktop) {
     font-size: variables.$navFontSizeDesktop;
+    text-transform: unset;
   }
   color: variables.$fontColorPrimary;
   font-size: variables.$navFontSizeMobile;

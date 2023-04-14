@@ -2,6 +2,6 @@ import './notFound.scss';
 
 export default function NotFound() {
   return (
-      <><p>404 component works!</p></>
+      <main><p>404 component works!</p></main>
   );
 }

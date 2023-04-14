@@ -1,1 +1,44 @@
-@use '../../../utils/styles/variables' as variables;
+@use "../../../utils/styles/variables" as variables;
+
+.homeContainer {
+  @media (min-width: variables.$breakpointDesktop) {
+    padding: 0 6em 0 6em;
+  }
+  padding: 0 1.5em 0 1.5em;
+  background-color: variables.$backgroundColorPrimary;
+}
+
+// ********** BANNER **********
+
+.homeContainer__banner {
+  position: relative;
+  width: 100%;
+}
+
+.homeContainer__banner__imageWrapper {
+  border-radius: 24px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.homeContainer__banner__imageWrapper__image {
+  border-radius: 24px;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.homeContainer__banner__message {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  color: variables.$fontColorSecondary;
+  font-size: 48px;
+  font-weight: 500;
+}
