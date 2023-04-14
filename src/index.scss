@@ -12,10 +12,14 @@ html,
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
+header, main {
   @media(min-width: variables.$breakpointDesktop) {
     padding: 5em;
   }
   padding: 1.5em;
   background-color: variables.$backgroundColorPrimary;
+}
+
+main {
+  min-height: 63vh;
 }

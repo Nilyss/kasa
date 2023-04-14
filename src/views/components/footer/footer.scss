@@ -1,1 +1,20 @@
-@use '../../../utils/styles/variables' as variables;
+@use "../../../utils/styles/variables" as variables;
+
+.footerContainer {
+  background: variables.$backgroundColorTertiary;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 2em;
+}
+
+.footerContainer__containerBottom__message {
+    @media (min-width: variables.$breakpointDesktop) {
+        font-size: variables.$footerMessageFontSize;
+    }
+  color: variables.$fontColorSecondary;
+  font-size: variables.$footerMessageFontSizeMobile;
+  cursor: default;
+}
